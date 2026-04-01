@@ -1,6 +1,13 @@
 {
   "participant_id": {
-    "Description": "unique participant identifier"
+    "Description": "unique participant identifier",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "Original_ID": {
     "Description": "participant identifier from recording"
@@ -9,7 +16,19 @@
     "Description": "ANOTHER participant identifier: scan-generated"
   },
   "sex": {
-    "Description": "sex of the participant"
+    "Description": "sex of the participant",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {},
+      "MissingValues": [
+        "1",
+        "0"
+      ]
+    }
   },
   "Group": {
     "Levels": {
@@ -19,6 +38,26 @@
     "Description": "Group"
   },
   "age": {
-    "Description": "age of the participant"
+    "Description": "age of the participant",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   }
 }
